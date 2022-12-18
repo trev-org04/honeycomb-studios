@@ -1,0 +1,440 @@
+html {
+  scroll-behavior: smooth;
+ }
+* {
+  margin: 0; 
+  padding: 0;
+  background-color: #040F0F;
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #7FB685;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7FB685;
+} 
+.header  {
+  padding: 25px 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #040F0F;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+.menu, .search  {
+  filter: invert(37%) sepia(9%) saturate(1333%) hue-rotate(104deg) brightness(97%) contrast(89%);
+  width: 30px;
+  background-color: transparent;
+  transition: 0.15s ease-in-out all;
+}
+.phone, .profile {
+  filter: invert(37%) sepia(9%) saturate(1333%) hue-rotate(104deg) brightness(97%) contrast(89%);
+  width: 25px;
+  margin: 0px 5px 1px 0px;
+  background-color: transparent;
+  transition: 0.15s ease-in-out all;
+}
+.menu:hover  {
+  filter: invert(77%) sepia(26%) saturate(451%) hue-rotate(76deg) brightness(83%) contrast(88%);
+  scale: 1.05;
+}
+.input  {
+  border: 0;
+  outline: 0;
+  color: #EFEAE0;
+  font-family: 'HM-Sans';
+  transition: 0.15s ease-in-out all;
+}
+.orderHeader  {
+  margin: 35px 0px 15px 0px;
+  color: #EFEAE0;
+  font-size: 20px;
+  font-family: 'HM-Sans';
+  padding-bottom: 5px;
+}
+.modalInputBoxTop, .modalInputBox  {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  transition: 0.15s ease-in-out all;
+  border-bottom: #426a5a 3px solid;
+  padding-top: 45px;
+}
+.modalInputBoxTop {
+  padding-top: 5px;
+}
+.modalInputBox:focus, .modalInputBox:hover, .modalInputBoxTop:focus, .modalInputBoxTop:hover {
+  border-bottom: #7FB685 3px solid;
+}
+.modalInputBox:hover .phone, .modalInputBoxTop:hover .profile  {
+  filter: invert(77%) sepia(26%) saturate(451%) hue-rotate(76deg) brightness(83%) contrast(88%);
+}
+.logo {
+  filter: invert(37%) sepia(9%) saturate(1333%) hue-rotate(104deg) brightness(97%) contrast(89%);
+  width: 100px;
+  position: absolute;
+  right: 50vw;
+  background-color: transparent;
+}
+.sidenavLogo {
+  filter: invert(37%) sepia(9%) saturate(1333%) hue-rotate(104deg) brightness(97%) contrast(89%);
+  width: 100px;
+  background-color: transparent;
+}
+.landingTextContainer  {
+  width: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 25px 0px 25px 30px;
+}
+.landingHeader  {
+  font-family: 'Retroica';
+  color: #426A5A;
+  font-size: 55px;
+}
+.landingButton  {
+  width: 8em;
+  border: 0;
+  background-color: #7FB685;
+  padding: 10px 0;
+  font-size: 15px;
+  margin-top: 2em;
+  border-radius: 5px;
+  font-family: 'HM-Sans';
+  transition: 0.15s ease-in-out all;
+  text-decoration: none;
+  color: #040F0F;
+  text-align: center;
+}
+.landingButton:hover  {
+  scale: 1.05;
+  opacity: .6;
+}
+.landingContainer  {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+}
+.landingPic  {
+  width: 40%;
+  padding: 0px 25px;
+}
+.sitemap  {
+  width: 100%;
+  background-color: #426A5A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+}
+.sitemapText  {
+  font-size: 10px;
+  font-family: 'HM-Sans';
+  background-color: #426A5A;
+  color: #7FB685;
+}
+.productContainer  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #426A5A;
+  padding: 150px 0px;
+}
+.productHeader  {
+  font-family: 'Retroica';
+  font-size: 30px;
+  color: #7FB685;
+  background-color: #426A5A;
+  align-self: center;
+}
+.prodContain  {
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - 7px));
+  grid-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 5em 55px 0px 55px;
+}
+.item  {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.35s ease-in-out all;
+  border-radius: 2.5px;
+}
+.item:hover  {
+  scale: 1.05;
+}
+.customButton  {
+  width: 8em;
+  border: 0;
+  background-color: #7FB685;
+  padding: 10px 0;
+  font-size: 15px;
+  margin: 5em auto 0px auto;
+  display: table;
+  border-radius: 5px;
+  font-family: 'HM-Sans';
+  transition: 0.15s ease-in-out all;
+}
+.customButton:hover  {
+  scale: 1.05;
+  opacity: .6;
+}
+.button  {
+  width: 5em;
+  height: 5em;
+}
+button:focus {
+  outline: 0;
+}
+.itemPic {
+  width: 100%;
+  pointer-events: none;
+  margin-bottom: 1.5em;
+}
+.itemName  {
+  color: #EFEAE0;
+  font-family: 'HM-Sans';
+  font-size: 15px;
+  align-self: stretch;
+}
+.itemPrice  {
+  color: #EFEAE0;
+  font-family: 'HM-Sans';
+  font-size: 13px;
+  opacity: .75;
+  align-self: stretch;
+}
+.opacity  {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 15, 15, 0.8);
+  position: fixed;
+  z-index: 2;
+  display: none;
+  transition: 0.15s ease-in-out all;
+}
+.modal {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  background-color: #040F0F;
+  width: 60%;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 25px;
+  border-radius: 2.5px;
+  transition: 0.5s ease-in-out all;
+}
+.modalHeader  {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+.modalIcon, .sidenavIcon  {
+  fill: transparent;
+  width: 20px;
+  transition: 0.15s ease-in-out all;
+}
+.modalIcon:hover, .sidenavIcon:hover  {
+  opacity: .6;
+}
+.modalContainer  {
+  display: flex;
+  flex-direction: row;
+}
+.modalPic {
+  width: 100%;
+  background-color: #040F0F;
+  pointer-events: none;
+}
+.modalName  {
+  color: #EFEAE0;
+  font-family: 'HM-Sans';
+  font-size: 25px;
+  background-color: #040F0F;
+}
+.modalPrice  {
+  color: #EFEAE0;
+  font-family: 'HM-Sans';
+  font-size: 13px;
+  opacity: .75;
+  background-color: #040F0F;
+}
+.modalDesc  {
+  color: #EFEAE0;
+  font-family: 'HM-Sans';
+  font-size: 13px;
+  opacity: .75;
+  background-color: #040F0F;
+  padding-top: 20px;
+}
+.modalLeftContain  {
+  background-color: #040F0F;
+  flex: 1;
+  margin-right: 10px
+}
+.modalRightContain  {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: #040F0F;
+  margin: 0px 0px 10px 10px;
+  justify-content: space-between;
+}
+.modalDataContain  {
+  display: flex;
+  flex-direction: column;
+}
+.modalDataHeaderContain  {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.modalButton {
+  border: 0;
+  background-color: #7FB685;
+  padding: 5px 0;
+  font-size: 13px;
+  margin-top: 2em;
+  border-radius: 5px;
+  font-family: 'HM-Sans';
+  transition: 0.15s ease-in-out all;
+}
+.modalButton:hover  {
+  scale: 1.05;
+  opacity: .6;
+}
+.error {
+  font-family: 'HM-Sans';
+  font-size: 13px;
+  color: #f7251c;
+  display: table;
+  margin: auto;
+  padding-top: 1em;
+  transition: 0.15s ease-in-out all;
+  display: none;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #040F0F;
+  overflow-x: hidden; 
+  transition: 0.15s ease-in-out all;
+}
+.closeContain  {
+  display: flex;
+  justify-content: flex-end;
+}
+.linkContain  {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0px;
+}
+.link  {
+  padding-bottom: 25px;
+  color: #EFEAE0;
+  font-family: 'HM-Sans';
+  text-decoration: none;
+  transition: 0.15s ease-in-out all;
+}
+.link:hover  {
+  margin-left: 10px;
+  color: #7FB685;
+}
+.searchBox, .inputBox  {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  transition: 0.35s ease-in-out all;
+}
+.searchBox  {
+  position: absolute;
+  right: 25px;
+  padding-bottom: 2px;
+}
+.box  {
+  border: 0;
+  outline: 0;
+  width: 0;
+  color: #EFEAE0;
+  font-family: 'HM-Sans';
+  transition: 0.35s ease-in-out all;
+}
+.searchBox:hover .search  {
+  filter: invert(77%) sepia(26%) saturate(451%) hue-rotate(76deg) brightness(83%) contrast(88%);
+  scale: 1.05;
+}
+.searchBox:hover .box  {
+  width: 100%;
+}
+.searchBox:hover, .inputBox  {
+  border-bottom: #7FB685 3px solid;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .landingHeader  {
+    font-size: 35px;
+  }
+  .customButton, .landingButton, .modalButton {
+    color: #040F0F;
+  }
+  .customButton  {
+    margin: 0em auto 0 auto;
+  }
+  .prodContain  {
+    grid-template-columns: repeat(2, calc(50% - 7px));
+    grid-gap: 20px;
+  }
+  .item  {
+    margin-bottom: 35px;
+  }
+  .modalName  {
+    font-size: 18px;
+  }
+  .orderHeader  {
+    font-size: 16px;
+  }
+  .modal  {
+    width: 80%;
+  }
+  .header  {
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .prodContain  {
+    grid-template-columns: repeat(1, calc(100% - 7px));
+    grid-gap: 20px;
+  }
+  .landingHeader  {
+    font-size: 25px;
+  }
+}
