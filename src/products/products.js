@@ -76,6 +76,7 @@ export default class Gallery extends React.Component {
             name: name,
             phoneNumber: phoneNumber,
             posterName: posterName,
+            dateTime: new Date(),
           });
           return docRef;
         }

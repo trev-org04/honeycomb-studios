@@ -1,4 +1,3 @@
-
 import logo from './static/logo.svg';
 import menu from './static/menu.svg';
 import search from './static/search.svg';
@@ -77,6 +76,7 @@ export default class Home extends React.Component {
             name: name,
             phoneNumber: phoneNumber,
             posterName: posterName,
+            dateTime: new Date(),
           });
           return docRef;
         }
