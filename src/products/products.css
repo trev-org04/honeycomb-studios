@@ -77,23 +77,10 @@ html {
 .modalInputBox:hover .phone, .modalInputBoxTop:hover .profile  {
   filter: invert(77%) sepia(26%) saturate(451%) hue-rotate(76deg) brightness(83%) contrast(88%);
 }
-.logo {
-  filter: invert(37%) sepia(9%) saturate(1333%) hue-rotate(104deg) brightness(97%) contrast(89%);
-  width: 100px;
-  position: absolute;
-  right: 50vw;
-  background-color: transparent;
-}
 .sidenavLogo {
   filter: invert(37%) sepia(9%) saturate(1333%) hue-rotate(104deg) brightness(97%) contrast(89%);
   width: 100px;
   background-color: transparent;
-}
-.landingTextContainer  {
-  width: 50%;
-  display: inline-flex;
-  flex-direction: column;
-  padding: 25px 0px 25px 30px;
 }
 .landingHeader  {
   font-family: 'Retroica';
@@ -118,17 +105,6 @@ html {
   scale: 1.05;
   opacity: .6;
 }
-.landingContainer  {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 90vh;
-}
-.landingPic  {
-  width: 40%;
-  padding: 0px 25px;
-}
 .sitemap  {
   width: 100%;
   background-color: #426A5A;
@@ -143,13 +119,6 @@ html {
   font-family: 'HM-Sans';
   background-color: #426A5A;
   color: #7FB685;
-}
-.productContainer  {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #426A5A;
-  padding: 150px 0px;
 }
 .productHeader  {
   font-family: 'Retroica';
@@ -179,22 +148,6 @@ html {
 }
 .item:hover  {
   scale: 1.05;
-}
-.customButton  {
-  width: 8em;
-  border: 0;
-  background-color: #7FB685;
-  padding: 10px 0;
-  font-size: 15px;
-  margin: 5em auto 0px auto;
-  display: table;
-  border-radius: 5px;
-  font-family: 'HM-Sans';
-  transition: 0.15s ease-in-out all;
-}
-.customButton:hover  {
-  scale: 1.05;
-  opacity: .6;
 }
 .button  {
   width: 5em;
@@ -330,8 +283,7 @@ button:focus {
 .error {
   font-family: 'HM-Sans';
   font-size: 13px;
-  color: #f7251c;
-  display: table;
+  color: #FF6E6E;
   margin: auto;
   padding-top: 1em;
   transition: 0.15s ease-in-out all;

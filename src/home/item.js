@@ -114,7 +114,6 @@ export default class Item extends React.Component {
                 }, this)
                 }
             </div>
-                <button onClick={() => this.openModal(777, 'Custom Poster', '20')} className='customButton'>custom order</button>
             </>
         )
     };

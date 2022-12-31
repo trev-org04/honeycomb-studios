@@ -81,7 +81,7 @@ html {
   filter: invert(37%) sepia(9%) saturate(1333%) hue-rotate(104deg) brightness(97%) contrast(89%);
   width: 100px;
   position: absolute;
-  right: 50vw;
+  right: calc((100vw - 100px) / 2);
   background-color: transparent;
 }
 .sidenavLogo {
@@ -138,6 +138,23 @@ html {
   justify-content: center;
   padding: 10px 0px;
 }
+.sitemapImageContain  {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.sitemapImg  {
+  filter: invert(69%) sepia(25%) saturate(467%) hue-rotate(76deg) brightness(93%) contrast(87%);
+  background-color: transparent;
+  padding: 5px;
+  width: 15px;
+  transition: 0.15s ease-in-out all;
+}
+.sitemapImg:hover  {
+  opacity: .6;
+}
 .sitemapText  {
   font-size: 10px;
   font-family: 'HM-Sans';
@@ -149,7 +166,7 @@ html {
   flex-direction: column;
   justify-content: center;
   background-color: #426A5A;
-  padding: 150px 0px;
+  padding: 5em 0px;
 }
 .productHeader  {
   font-family: 'Retroica';
@@ -186,10 +203,13 @@ html {
   padding: 10px 0;
   font-size: 15px;
   margin: 5em auto 0px auto;
-  display: table;
+  display: flex;
   border-radius: 5px;
   font-family: 'HM-Sans';
   transition: 0.15s ease-in-out all;
+  text-decoration: none;
+  justify-content: center;
+  color: #040F0F;
 }
 .customButton:hover  {
   scale: 1.05;
@@ -329,8 +349,7 @@ button:focus {
 .error {
   font-family: 'HM-Sans';
   font-size: 13px;
-  color: #f7251c;
-  display: table;
+  color: #FF6E6E;
   margin: auto;
   padding-top: 1em;
   transition: 0.15s ease-in-out all;
@@ -397,6 +416,12 @@ button:focus {
   border-bottom: #7FB685 3px solid;
   padding-bottom: 0;
 }
+.searchBox:hover + .logo {
+  display: none;
+}
+.mobile  {
+  display: none;
+}
 
 @media screen and (max-width: 1000px) {
   .landingHeader  {
@@ -410,7 +435,7 @@ button:focus {
   }
   .itemContain  {
     flex-direction: column;
-    padding: 5em 35px;
+    padding: 5em 0px;
   }
   .item  {
     margin-bottom: 35px;
@@ -428,8 +453,27 @@ button:focus {
     padding: 25px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 650px) {
   .landingHeader  {
     font-size: 25px;
+  }
+  .landingContainer {
+    height: 100%;
+  }
+  .landingTextContainer  {
+    width: 90%;
+    padding: 0;
+    margin-bottom: 5em;
+  }
+  .landingPic  {
+    width: 100%;
+    padding: 0; 
+  }
+  .desktop  {
+    display: none;
+  }
+  .mobile {
+    display: inline-flex;
+    flex-direction: column;
   }
 }

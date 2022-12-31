@@ -1,0 +1,96 @@
+.contactContain  {
+    background-color: #426A5A;
+    height: 90vh;
+    padding: 0px 30px;
+}
+.productHeader  {
+    display: table;
+    margin: auto;
+}
+.contactInput  {
+    background-color: #426A5A;
+    border: 0;
+    outline: 0;
+    color: #EFEAE0;
+    font-family: 'HM-Sans';
+    transition: 0.15s ease-in-out all;
+    font-size: 15px;
+    width: 100%;
+}
+.contactProfile, .contactPhone, .contactMessage  {
+    filter: invert(65%) sepia(45%) saturate(271%) hue-rotate(76deg) brightness(94%) contrast(87%);
+    background: transparent;
+    width: 35px;
+    margin-right: 5px;
+}
+.contactMessage  {
+    height: 35px;
+}
+.inputBoxTop, .inputBox {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    transition: 0.15s ease-in-out all;
+    border-bottom: #7FB685 3px solid;
+    padding-top: 45px;
+    background-color: #426A5A;
+}
+.inputBoxTop:focus, .inputBoxTop:hover, .inputBox:focus, .inputBox:hover {
+    border-bottom: #040F0F 3px solid;
+}
+.inputBoxTop:focus .contactProfile, .inputBoxTop:hover .contactProfile, .inputBox:focus .contactPhone, .inputBox:hover .contactPhone, .inputBox:focus .contactMessage, .inputBox:hover .contactMessage {
+    filter: invert(4%) sepia(7%) saturate(4336%) hue-rotate(131deg) brightness(92%) contrast(97%);
+}
+::placeholder  {
+    color: #EFEAE0;
+    opacity: .6;
+}
+:-moz-placeholder {
+    color: #EFEAE0;
+    opacity: .6;
+}
+::-moz-placeholder, :-ms-input-placeholder  {
+    color: #EFEAE0;
+    opacity: .6;
+}
+:-ms-input-placeholder {
+    color: #EFEAE0;
+    opacity: .6;
+}
+.textArea  {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+.contactHeader  {
+    font-family: 'Retroica';
+    font-size: 30px;
+    color: #7FB685;
+    background-color: #426A5A;
+    justify-content: center;
+    display: flex;
+    padding-top: 2em;
+}
+.contactButton  {
+    width: 8em;
+    border: 0;
+    background-color: #7FB685;
+    padding: 10px 0;
+    font-size: 15px;
+    margin: 2.5em auto 0px auto;
+    display: flex;
+    border-radius: 5px;
+    font-family: 'HM-Sans';
+    transition: 0.15s ease-in-out all;
+    text-decoration: none;
+    justify-content: center;
+    color: #040F0F;
+    transition: 0.15s ease-in-out all;
+}
+.contactButton:hover {
+    scale: 1.05;
+    opacity: .6;
+}
+.error  {
+    background-color: #426A5A;
+}

@@ -1,10 +1,12 @@
 import logo from './static/logo.svg';
 import menu from './static/menu.svg';
-import search from './static/search.svg';
+// import search from './static/search.svg';
 import landingPic from './static/landingPagePic.jpg';
 import closeIcon from './static/closeIcon.png';
 import phone from './static/phone.svg';
 import profile from './static/profile.svg';
+import instagram from './static/instagram.svg';
+import facebook from './static/facebook.svg';
 import React from 'react';
 import firebaseVars from '../firebase';
 import './home.css';
@@ -13,7 +15,6 @@ import Item from './item';
 export default class Home extends React.Component {
 
     disableTools() {
-    window.addEventListener('load', () => {
       document.onkeydown = function (e) {
         if (e.keyCode === 123) {
           return false;
@@ -31,7 +32,6 @@ export default class Home extends React.Component {
           return false;
         }
       }
-    });
   };
 
     closeModal() {
@@ -62,9 +62,14 @@ export default class Home extends React.Component {
       var phoneNumber = document.getElementById('modalPhoneNum').value;
       var posterName = document.getElementById('modalName').innerHTML;
       var error = document.getElementById('error');
-      if (name === '' || phoneNumber === '' || phoneNumber.length !== 10) {
-        error.innerHTML = 'Please fill out all fields correctly';
-        error.style.color = '#F7251C';
+      if (name === '') {
+        error.innerHTML = 'Please enter your name.';
+        error.style.color = '#FF6E6E';
+        error.style.display = 'table';
+      }
+      else if (phoneNumber === '' || phoneNumber.length !== 10) {
+        error.innerHTML = 'Please enter a valid phone number.';
+        error.style.color = '#FF6E6E';
         error.style.display = 'table';
       }
       else if (name !== '' && phoneNumber !== '' && phoneNumber.length === 10) {
@@ -81,9 +86,15 @@ export default class Home extends React.Component {
           return docRef;
         }
         catch (e) {
-          console.error("Error adding document: ", e);
+          error.innerHTML = 'An unexpected error occurred. Please try again later.';
+          error.style.color = '#EFEAE0';
+          error.style.display = 'table';
         }
       }
+    };
+   
+    openInNewTab(url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
     };
 
     componentDidMount() {
@@ -102,8 +113,8 @@ export default class Home extends React.Component {
           <div className='linkContain'>
             <a className='link' href="/">home</a>
             <a className='link' href="/products">products</a>
-            <a className='link' href="/">about</a>
-            <a className='link' href="/">contact</a>
+            {/* <a className='link' href="/about">about</a> */}
+            <a className='link' href="/contact">contact</a>
           </div>
         </div>
         <div id='modal' className='modal'>
@@ -111,7 +122,7 @@ export default class Home extends React.Component {
             <img src={closeIcon} alt='' className='modalIcon' onClick={this.closeModal}></img>
           </div>
           <div className='modalContainer'>
-            <div className='modalLeftContain'>
+            <div className='modalLeftContain desktop'>
               <img id='modalImg' className="modalPic" alt=""></img>
             </div>
             <div className='modalRightContain'>
@@ -139,23 +150,35 @@ export default class Home extends React.Component {
         <header className="header">
           <img src={menu} className='menu' alt='' onClick={this.openSidenav}></img>
           <img src={logo} className='logo' alt=''></img>
-          <div className='searchBox'>
+          {/* <div className='searchBox'>
             <img src={search} className='search' alt=''></img>
-            <input className='box' placeholder='Search' type='text'></input>
-          </div>
+            <input onChange={this.search} className='box' placeholder='Search' type='text'></input>
+          </div> */}
         </header>
-        <div className='landingContainer'>
+        <div className='landingContainer desktop'>
           <div className='landingTextContainer'>
             <span className='landingHeader'>modern art for the modern era</span>
             <a className='landingButton' href='#products'>shop now</a>
           </div>
           <img src={landingPic} className='landingPic' alt=''></img>
         </div>
+        <div className='landingContainer mobile'>
+          <img src={landingPic} className='landingPic' alt=''></img>
+          <div className='landingTextContainer'>
+            <span className='landingHeader'>modern art for the modern era</span>
+            <a className='landingButton' href='#products'>shop now</a>
+          </div>
+        </div>
         <div className='productContainer'>
           <span className='productHeader'>featured products</span>
           <Item id='products'></Item>
+          <a href='/products' className='customButton'>see all</a>
         </div>
         <div className="sitemap">
+          <div className='sitemapImageContain'>
+            <img src={instagram} onClick={() => this.openInNewTab('https://www.instagram.com/treestudios_/')} className='sitemapImg' alt=''></img>
+            <img src={facebook} onClick={() => this.openInNewTab('https://www.facebook.com/people/tree-studios/100088906634543/')} className='sitemapImg' alt=''></img>
+          </div>
           <span className='sitemapText'>© 2022 tree studios. All Rights Reserved.</span>
         </div>
       </>
