@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* Global Styles */
+
+@font-face {
+  font-family: "ST Mono";
+  src: url("./assets/Share-Tech-Mono.TTF");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body  {
+  padding: 0;
+  margin: 0;
+  font-family: 'ST Mono';
+  color: #E2DDD6;
+  background-color: #141115;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Header Component */
+
+.header  {
+  background-color: #141115;
+  padding: 35px;
+  overflow: hidden;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/* .header-background-image  {
+  background-image: url(./assets/header.svg);
+  background-repeat: repeat-x;
+  background-size: contain;
+  filter: invert(99%) sepia(3%) saturate(966%) hue-rotate(325deg) brightness(94%) contrast(88%);
+} */
+
+.title  {
+  font-size: 30px;
+}
+
+.content-container  {
+  padding: 35px;
+}
+
+/* Header */
+
+.product-header  {
+  font-size: 20px;
+}
+
+/* Card Container */
+
+.card-container  {
+  display: grid;
+  grid-template-columns: repeat(4, calc(23% - 7px));
+  column-gap: 20px;
+  row-gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  margin: 0px 35px 35px 35px;
+}
+
+/* Card Component */
+
+.card  {
+  background-color: #E2DDD6;
+  padding: 15px;
+}
+.product-information-container  {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-title  {
+  font-size: 18px;
+  color: #141115;
+}
+.product-price  {
+  font-size: 16px;
+  color: #141115;
+}
+.product-image  {
+  width: 100%;
+  margin-bottom: 1em;
+  border: 0.25px solid #141115;
+}
+.order-button  {
+  background-color: #141115;
+  padding: 15px 10px;
+  font-size: 15px;
+  margin-top: 1em;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  transition: display 0.15s ease-in-out;
+  height: 25px;
 }
-
-.App-link {
-  color: #61dafb;
+.order-button-text  {
+  transition: display 0.15s ease-in-out;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-arrow  {
+  margin-left: 10px;
+  transition: display 0.15s ease-in-out;
 }
