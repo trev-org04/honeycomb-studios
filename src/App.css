@@ -46,13 +46,13 @@ html, body  {
 .content-container  {
   padding: 35px;
 }
-.header-hexagon  {
+.header-hexagon, .admin-header-hexagon  {
   width: 27px;
   margin-right: 10px;
   animation: rotate-hexagon 2.5s infinite;
   transition: all 0.5s cubic-bezier(.075,.82,.165,1);
 }
-.header-hexagon:hover  {
+.header-hexagon:hover, .admin-header-hexagon:hover  {
   opacity: 0.5;
 }
 @keyframes rotate-hexagon {

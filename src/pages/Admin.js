@@ -19,7 +19,7 @@ function Admin() {
         {!isAuthenticated && 
             <>
                 <div className="admin-onload-container">
-                    <img src={hexagon} className="header-hexagon" style={{ margin: 0, width: 50 }} alt="logo"></img>
+                    <img src={hexagon} className="admin-header-hexagon" style={{ margin: 0, width: 50, marginBottom: "1em" }} alt="logo"></img>
                     <input type="password" id="password" placeholder="PASSWORD" className="admin-onload-input"></input>
                     <button type="button" className="order-button" style={{ width: 200, marginTop: 0 }} onClick={logIn}>LOG IN</button>
                 </div>
