@@ -1,14 +1,20 @@
 import './App.css';
-import ItemDisplay from './itemDisplay';
+import hexagon from './assets/hexagon.svg';
+import ItemDisplay from './itemDisplay.tsx';
 
 function App() {
   return (
     <div className="App">
-      <div class="header">
-        <span class="title">HONEYCOMB STUDIOS</span>
+      <div className="header">
+        <span className="title">HONEYCOMB STUDIOS</span>
+        <div>
+          <img src={hexagon} className="header-hexagon" alt="logo"></img>
+          <img src={hexagon} className="header-hexagon" alt="logo"></img>
+          <img src={hexagon} className="header-hexagon" alt="logo"></img>
+        </div>
       </div>
-      <div class="content-container">
-          <span class="product-header">PRODUCTS</span>
+      <div className="content-container">
+          <span className="product-header">PRODUCTS</span>
       </div>
       <ItemDisplay></ItemDisplay>
     </div>

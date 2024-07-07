@@ -4,7 +4,6 @@
   font-family: "ST Mono";
   src: url("./assets/Share-Tech-Mono.TTF");
 }
-
 html, body  {
   padding: 0;
   margin: 0;
@@ -18,15 +17,12 @@ html, body  {
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -40,21 +36,32 @@ html, body  {
   top: 0;
   position: -webkit-sticky;
   position: sticky;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
 }
-
-/* .header-background-image  {
-  background-image: url(./assets/header.svg);
-  background-repeat: repeat-x;
-  background-size: contain;
-  filter: invert(99%) sepia(3%) saturate(966%) hue-rotate(325deg) brightness(94%) contrast(88%);
-} */
-
 .title  {
   font-size: 30px;
 }
-
 .content-container  {
   padding: 35px;
+}
+.header-hexagon  {
+  width: 27px;
+  margin-right: 10px;
+  animation: rotate-hexagon 2.5s infinite;
+  transition: all 0.5s cubic-bezier(.075,.82,.165,1);
+}
+.header-hexagon:hover  {
+  opacity: 0.5;
+}
+@keyframes rotate-hexagon {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 
 /* Header */
@@ -67,9 +74,9 @@ html, body  {
 
 .card-container  {
   display: grid;
-  grid-template-columns: repeat(4, calc(23% - 7px));
+  grid-template-columns: repeat(4, calc(23%));
   column-gap: 20px;
-  row-gap: 40px;
+  row-gap: 20px;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
@@ -78,23 +85,15 @@ html, body  {
 
 /* Card Component */
 
-.card  {
-  background-color: #E2DDD6;
-  padding: 15px;
-}
 .product-information-container  {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.product-title  {
-  font-size: 18px;
-  color: #141115;
-}
-.product-price  {
-  font-size: 16px;
-  color: #141115;
+.product-title, .product-price  {
+  font-size: 1.3vw;
+  color: #E2DDD6;
 }
 .product-image  {
   width: 100%;
@@ -102,20 +101,101 @@ html, body  {
   border: 0.25px solid #141115;
 }
 .order-button  {
-  background-color: #141115;
+  background-color: #E2DDD6;
   padding: 15px 10px;
   font-size: 15px;
   margin-top: 1em;
   align-items: center;
   justify-content: center;
   display: flex;
-  transition: display 0.15s ease-in-out;
-  height: 25px;
+  transition: all 0.5s cubic-bezier(.075,.82,.165,1);
+  font-family: 'ST Mono';
+  color: #141115;
+  outline: none;
+  border: none;
+  width: 100%;
 }
-.order-button-text  {
-  transition: display 0.15s ease-in-out;
+.order-button:hover  {
+  opacity: 0.5;
+  transform: scale(0.95);
 }
-.button-arrow  {
-  margin-left: 10px;
-  transition: display 0.15s ease-in-out;
+
+/* Ordering Modal */
+
+.order-modal  {
+  display: flex;
+  flex-direction: column;
+  background-color: #E2DDD6;
+  padding: 10px;
+  margin-bottom: 1em;
+  min-height: max-content;
+}
+.order-title  {
+  font-size: 18px;
+  color: #141115;
+}
+.order-input  {
+  border: none;
+  outline: none;
+  font-family: "ST Mono";
+  font-size: 15px;
+  padding: 5px 10px;
+  margin-bottom: 1em;
+}
+.order-desc  {
+  font-size: 15px;
+  opacity: 0.75;
+  color: #141115;
+  margin-bottom: 0;
+}
+.order-steps li  {
+  color: #141115;
+  opacity: 0.75;
+  margin-top: 0;
+  font-size: 15px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 650px) {
+  .card-container  {
+    grid-template-columns: repeat(2, calc(50%));
+  }
+  .product-title, .product-price  {
+    font-size: 3vw;
+  }
+  .title  {
+    font-size: 20px;
+  }
+  .header-hexagon  {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card-container  {
+    grid-template-columns: repeat(1, calc(100%));
+  }
+  .product-title, .product-price  {
+    font-size: 4vw;
+  }
+  .header-hexagon:first-child  {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .title  {
+    font-size: 16px;
+  }
+  .header-hexagon  {
+    width: 16px;
+  }
+  .product-header  {
+    font-size: 16px;
+  }
+  .product-title, .product-price  {
+    font-size: 4vw;
+  }
+  .header-hexagon:nth-child(2)  {
+    display: none;
+  }
 }
