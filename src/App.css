@@ -7,7 +7,7 @@
 html, body  {
   padding: 0;
   margin: 0;
-  font-family: 'ST Mono';
+  font-family: "ST Mono";
   color: #E2DDD6;
   background-color: #141115;
 }
@@ -85,6 +85,9 @@ html, body  {
 
 /* Card Component */
 
+.card  {
+  position: relative;
+}
 .product-information-container  {
   display: flex;
   flex-direction: row;
@@ -109,7 +112,7 @@ html, body  {
   justify-content: center;
   display: flex;
   transition: all 0.5s cubic-bezier(.075,.82,.165,1);
-  font-family: 'ST Mono';
+  font-family: "ST Mono";
   color: #141115;
   outline: none;
   border: none;
@@ -153,6 +156,83 @@ html, body  {
   opacity: 0.75;
   margin-top: 0;
   font-size: 15px;
+}
+.loading-hexagon  {
+  transition: all 0.5s cubic-bezier(.075,.82,.165,1);
+  animation: loading-indicator 3s infinite;
+  position: absolute;
+  z-index: 7;
+  height: 5em;
+  top: 30%;
+  left: 37%;
+}
+@keyframes loading-indicator {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* Admin Page */
+.admin-footer  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  width: calc(100% - 30px);
+  padding: 0px 15px;
+}
+.admin-footer-text  {
+  font-family: "ST Mono";
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: 5px;
+  text-align: center;
+}
+.admin-footer-hexagon  {
+  width: 11px;
+  margin-bottom: -2px;
+  animation: rotate-hexagon 2.5s infinite;
+  transition: all 0.5s cubic-bezier(.075,.82,.165,1);
+}
+.admin-footer-hexagon:hover  {
+  opacity: 0.5;
+}
+.admin-onload-container  {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.admin-onload-input  {
+  border: none;
+  outline: none;
+  font-family: "ST Mono";
+  font-size: 15px;
+  padding: 10px 15px;
+  background-color: #E2DDD6;
+  margin: 1em 0;
+  width: 170px;
+}
+.order-card  {
+  background-color: #E2DDD6;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.order-info, .order-title, .order-footer  {
+  color: #141115;
+}
+.order-footer  {
+  font-size: 12px;
 }
 
 

@@ -1,8 +1,8 @@
-import './App.css';
-import hexagon from './assets/hexagon.svg';
-import ItemDisplay from './itemDisplay.tsx';
+import "../App.css";
+import hexagon from "../assets/hexagon.svg";
+import ItemDisplay from "../components/itemDisplay.tsx";
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <div className="header">
@@ -21,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

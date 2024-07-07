@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import firebaseVars from './firebase';
-import ItemCard from './itemCard.tsx';
+import React, { useEffect, useState } from "react";
+import firebaseVars from "../firebase.js";
+import ItemCard from "./itemCard.tsx";
 
 export interface Poster {
     posterName: string;
@@ -20,13 +20,13 @@ export default function ItemDisplay () {
         return link;
     }
     function getData() {
-        firebaseVars.db.collection('posters').get().then((querySnapshot) => {
+        firebaseVars.db.collection("posters").get().then((querySnapshot) => {
             const posters: Array<Poster> = [];
             querySnapshot.forEach(async (element) => {
-                const link = await getItemPictures(element.get('posterName'));
+                const link = await getItemPictures(element.get("posterName"));
                 const newPoster: Poster = {
-                    posterName: element.get('posterName'),
-                    price: element.get('price'),
+                    posterName: element.get("posterName"),
+                    price: element.get("price"),
                     imageLink: link,
                 }
                 posters.push(newPoster);
