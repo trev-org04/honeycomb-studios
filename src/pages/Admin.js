@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../App.css";
 import hexagon from "../assets/hexagon.svg";
 import OrderDisplay from "../components/orderDisplay.tsx";
@@ -13,6 +13,10 @@ function Admin() {
             setIsAuthenticated(true);
         }
     }
+
+    useEffect(() => {
+        document.title = 'Honeycomb Studios - Admin';
+    }, []);
 
     return (
         <div className="Admin">

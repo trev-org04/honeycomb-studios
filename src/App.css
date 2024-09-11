@@ -39,6 +39,7 @@ html, body  {
   align-items: center;
   justify-content: space-between;
   display: flex;
+  z-index: 999;
 }
 .title  {
   font-size: 30px;
@@ -156,6 +157,11 @@ html, body  {
   opacity: 0.75;
   margin-top: 0;
   font-size: 15px;
+}
+.insta-link  {
+  text-decoration: none;
+  color: #141115;
+  font-weight: 900;
 }
 .loading-hexagon  {
   transition: all 0.5s cubic-bezier(.075,.82,.165,1);

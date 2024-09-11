@@ -6,6 +6,8 @@ export interface Poster {
     posterName: string;
     price: string;
     imageLink: string;
+    isStandardSize: boolean;
+    posterSize?: string;
 }
 
 export default function ItemDisplay () {
@@ -28,6 +30,8 @@ export default function ItemDisplay () {
                     posterName: element.get("posterName"),
                     price: element.get("price"),
                     imageLink: link,
+                    isStandardSize: element.get("isStandardSize"),
+                    posterSize: element.get("posterSize"),
                 }
                 posters.push(newPoster);
                 setPosters([...posters]);
@@ -44,7 +48,7 @@ export default function ItemDisplay () {
         <>
             <div id="products" className="card-container">
                 {posters.map((poster, i) => (
-                    <ItemCard key={i} imageLink={poster.imageLink} posterName={poster.posterName} price={poster.price}></ItemCard>
+                    <ItemCard key={i} imageLink={poster.imageLink} posterName={poster.posterName} price={poster.price} isStandardSize={poster.isStandardSize} posterSize={poster.posterSize}></ItemCard>
                 ))}
             </div>
         </>
