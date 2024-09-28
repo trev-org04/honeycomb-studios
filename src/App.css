@@ -1,13 +1,17 @@
 /* Global Styles */
 
 @font-face {
-  font-family: "ST Mono";
-  src: url("./assets/Share-Tech-Mono.TTF");
+  font-family: "JetBrains Extra Bold";
+  src: url("./assets/JETBRAINSMONONL-EXTRABOLD.TTF");
+}
+@font-face {
+  font-family: "JetBrains Semi Bold";
+  src: url("./assets/JETBRAINSMONONL-SEMIBOLD.TTF");
 }
 html, body  {
   padding: 0;
   margin: 0;
-  font-family: "ST Mono";
+  font-family: "JetBrains Semi Bold";
   color: #E2DDD6;
   background-color: #141115;
 }
@@ -43,6 +47,7 @@ html, body  {
 }
 .title  {
   font-size: 30px;
+  font-family: "JetBrains Extra Bold";
 }
 .content-container  {
   padding: 35px;
@@ -113,7 +118,7 @@ html, body  {
   justify-content: center;
   display: flex;
   transition: all 0.5s cubic-bezier(.075,.82,.165,1);
-  font-family: "ST Mono";
+  font-family: "JetBrains Extra Bold";
   color: #141115;
   outline: none;
   border: none;
@@ -137,11 +142,13 @@ html, body  {
 .order-title  {
   font-size: 18px;
   color: #141115;
+  text-transform: uppercase;
+  font-family: "JetBrains Extra Bold";
 }
 .order-input  {
   border: none;
   outline: none;
-  font-family: "ST Mono";
+  font-family: "JetBrains Semi Bold";
   font-size: 15px;
   padding: 5px 10px;
   margin-bottom: 1em;
@@ -192,7 +199,7 @@ html, body  {
   padding: 0px 15px;
 }
 .admin-footer-text  {
-  font-family: "ST Mono";
+  font-family: "JetBrains Extra Bold";
   text-transform: uppercase;
   font-size: 12px;
   margin-right: 5px;
@@ -219,7 +226,7 @@ html, body  {
 .admin-onload-input  {
   border: none;
   outline: none;
-  font-family: "ST Mono";
+  font-family: "JetBrains Extra Bold";
   font-size: 15px;
   padding: 10px 15px;
   background-color: #E2DDD6;

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import firebaseVars from "../firebase.js";
-import ItemCard from "./itemCard.tsx";
 import OrderCard from "./orderCard.tsx";
 
 export interface Order {
