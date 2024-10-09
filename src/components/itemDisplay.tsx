@@ -10,7 +10,11 @@ export interface Poster {
     posterSize?: string;
 }
 
-export default function ItemDisplay () {
+interface ItemDisplayProps {
+    category: string;
+}
+
+export default function ItemDisplay(props: ItemDisplayProps) {
 
     // Variables
     const [posters, setPosters] = useState<Array<Poster>>([]);
@@ -22,7 +26,7 @@ export default function ItemDisplay () {
         return link;
     }
     function getData() {
-        firebaseVars.db.collection("posters").get().then((querySnapshot) => {
+        firebaseVars.db.collection("posters").where("category", "==", `${props.category}`).get().then((querySnapshot) => {
             const posters: Array<Poster> = [];
             querySnapshot.forEach(async (element) => {
                 const link = await getItemPictures(element.get("posterName"));

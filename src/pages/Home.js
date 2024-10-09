@@ -13,10 +13,27 @@ function Home() {
           <img src={hexagon} className="header-hexagon" alt="logo"></img>
         </div>
       </div>
+
       <div className="content-container">
-          <span className="product-header">PRODUCTS</span>
+          <span className="product-header">JUST DROPPED!</span>
       </div>
-      <ItemDisplay></ItemDisplay>
+      <ItemDisplay category="new"></ItemDisplay>
+
+      <div className="content-container">
+          <span className="product-header">MUSIC</span>
+      </div>
+      <ItemDisplay category="music"></ItemDisplay>
+
+      <div className="content-container">
+          <span className="product-header">OTHER</span>
+      </div>
+      <ItemDisplay category="other"></ItemDisplay>
+
+      <div className="content-container">
+          <span className="product-header">SWATCHES</span>
+      </div>
+      <ItemDisplay category="swatches"></ItemDisplay>
+
     </div>
   );
 }
